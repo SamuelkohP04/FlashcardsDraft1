@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class FlashCard1 extends AppCompatActivity {
-
+// hi
     final String TITLE = "FlashCard1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
