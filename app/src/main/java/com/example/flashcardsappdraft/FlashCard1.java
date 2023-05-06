@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class FlashCard1 extends AppCompatActivity {
 // hi
     final String TITLE = "FlashCard1";
+    int currentIndex = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +45,10 @@ public class FlashCard1 extends AppCompatActivity {
 
         TextView q1 = findViewById(R.id.textView4);
         TextView a1 = findViewById(R.id.textView5);
+
         Button b1 = findViewById(R.id.button7);
+        Button b2 = findViewById(R.id.button3);
+        Button b3 = findViewById(R.id.button4);
 
         a1.setVisibility(View.GONE);
 
@@ -75,6 +79,28 @@ public class FlashCard1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(FlashCard1.this, Home.class);
                 startActivity(intent);
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TITLE, String.valueOf(currentIndex));
+                currentIndex--;
+                if (currentIndex <= 0) {
+                    currentIndex = qList.size();
+                }
+                q1.setText(qList.get(currentIndex));
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentIndex++;
+                if (currentIndex >= qList.size()) {
+                    currentIndex = 0;
+                }
+                q1.setText(qList.get(currentIndex));
             }
         });
 

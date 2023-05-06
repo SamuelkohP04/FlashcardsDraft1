@@ -14,6 +14,8 @@
     <string name="toolbar5">Profile</string>
 
     <string name="prompt">Click on the flashcard (in this case, word) to find out the answer. Think of the answer first before clicking! </string>
+    <string name="prev">Prev </string>
+    <string name="next">Next </string>
 
     <string name="f1title">Singapore Social Studies Quiz</string>
     <string name="q1">Who is the President of Singapore?</string>
